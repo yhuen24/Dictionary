@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Dictionary Web Application</title>
+    <style>
+    .title{
+        margin: auto;
+        height: 150px;
+        width: 60%;
+        padding: 10px;
+        text-align: center;
+        }
+    .welcome {
+        top: -130px;
+        position: relative;
+        color: #ffffff;
+        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+        font-weight: bold;
+        font-size: 150px;
+        text-shadow: 1px 6px #2f6f63;
+    }
+    .input {
+        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+        margin-top:100px;
+        margin-left: 370px;
+        height: 60px;
+        width: 60%;
+        text-align: center;
+        box-shadow: 1px 4px #2f6f63;
+        color: #2c2f2e;
+    }
+    .output {
+        background-color: #FFFFFF;
+        margin-top:50px;
+        margin-left: 370px;
+        height: 505px;
+        width: 60%;
+        box-shadow: 1px 5px #2f6f63;
+        color: #2c2f2e;
+    }
+    #word {
+        padding-left: 10px;
+        font-size: 20pt;
+        height: 54px;
+        width:1125px;
+        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+        color: #2c2f2e;
+    }
+    #meaning {
+        padding: 10px;
+        margin-left: 10px;
+        font-size: 19pt;
+        height: 500px;
+        width:1115px;
+        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+        color: #2c2f2e;
+    }
+    #yhuen {
+        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+        font-size: 10pt;
+        color: #ffffff;
+        text-shadow: 1px 1px #2f6f63;
+    }
+    </style>
+</head>
+<body bgcolor=#449f8e>
+    <div class ="title">
+        <h1 class = "welcome">DICTIONARY</h1>
+    </div>
+
+    <div class="input">
+       <form action="{{ url_for("main")}}" method="post">
+            <input type="text" id="word" name="word" placeholder="{{holder}}">
+    </div>
+
+    <div class="output">
+            <p id ="meaning">{{result}}</p>
+    </div>
+
+    <div class = "author">
+        <p id="yhuen">Created by: Yhuen Yutico</p>
+    </div>
+</body>
+</html>
