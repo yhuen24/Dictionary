@@ -15,7 +15,7 @@ def main():
             prompt = "Enter a word"
             return render_template("home.html", result=prompt, holder=holder)
         if text in data:
-            string = str(data[text])[1:-1]
+            string = data[text]
             return render_template("home.html", result=string, holder=text)
         else:
             prompt = '"' + text + '" does not exist in the Dictionary'
