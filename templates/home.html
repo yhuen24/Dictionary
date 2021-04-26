@@ -31,6 +31,8 @@ user-scalable=no">
         color: #2c2f2e;
     }
     .output {
+        overflow: auto;
+        overflow-x: hidden;
         position: relative;
         top:20px;
         background-color: #FFFFFF;
@@ -49,7 +51,7 @@ user-scalable=no">
         font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
         color: #2c2f2e;
     }
-    #meaning {
+    .meaning {
         margin-top: 2px;
         padding-left: 2px;
         padding-right: 2px;
@@ -79,7 +81,10 @@ user-scalable=no">
     </div>
 
     <div class="output">
-            <p id ="meaning">{{result}}</p>
+            {% for i in result %}
+                <p class ="meaning">{{ i }}</p>
+            {% endfor %}
+             <p class ="meaning">{{ prompt }}</p>
     </div>
 
     <div class = "author">
